@@ -4,15 +4,15 @@ document.getElementById("themeSwitch").addEventListener("change", function () {
   document.body.classList.toggle("dark-theme", this.checked);
 
   if (document.body.classList.contains("dark-theme")) {
-    github.src = "assets/img/github2.png";
-    img.src = "assets/img/easteregg.png";
+    github.src = "/assets/img/github2.png";
+    img.src = "/assets/img/easteregg.png";
     img.id = "gameImage";
     img.onclick = function() {
         choisirOption('jul');
     };
   } else {
-    img.src = "assets/img/rock.png";
-    github.src = "assets/img/github.png";
+    img.src = "/assets/img/rock.png";
+    github.src = "/assets/img/github.png";
 
     img.onclick = function() {
       choisirOption('puit');
