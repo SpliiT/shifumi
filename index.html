@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <title>Shifumi</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+ <span data-tilt> <img src="assets/img/rock.png" id="gameImage" onclick="choisirOption('puit')"></span>
+        <li>
+          <h2>Shifumi - SpliiT Dev</h2>
+        </li>
+      
+      </ul>
+    </nav><span switch-tilt>    
+
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch">
+        <span class="slider round"></span>
+      </label></span>
+
+  </header>
+
+  <section class="section one" id="one">
+    <div class="items">
+      <span data-tilt> <h1 class="choix">Choisissez votre coup :</h1><br></span>
+      <div class="grid">
+        <span data-tilt> <img src="assets/img/pierre.png" class="mains" onclick="choisirOption('pierre')"></img></span>
+        <span data-tilt><img src="assets/img/papier.png" class="mains" onclick="choisirOption('papier')"></img></span>
+        <span data-tilt><img src="assets/img/ciseaux.png" class="mains" onclick="choisirOption('ciseaux')"></img></span>
+      </div>
+    </div>
+    <span result-tilt> <div class="result">        </span>
+      <h2 id="resultat-text" class="choix" style="margin-top: 30px; text-align: center;"></h2></span>
+      <div class="result-item">
+ <p id="joueur" class="joueur"></p> 
+    
+  <p id="ordinateur" class="ordinateur"></p> 
+
+
+      </div>
+  </section>
+<footer>
+  <p>&copy; SpliiT Dev</p><span data-tilt><a href=""<img src="assets/img/github.png" id="github" class="github"></span>
+</footer>
+
+
+  <script src="js/shifumi.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/tilt.jquery.js"></script>
+</body>
+
+</html>
