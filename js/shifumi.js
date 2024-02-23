@@ -86,7 +86,7 @@ function afficherMessageVictoireJoueur(message) {
     resultatContainer.innerText = message;
 
     const imageElement = document.createElement("img");
-    imageElement.src = "assets/img/winjoueurtest.png"; 
+    imageElement.src = "assets/img/winjoueur.png"; 
     imageElement.style.width = "300px"; // 
 
     resultatContainer.appendChild(imageElement);
