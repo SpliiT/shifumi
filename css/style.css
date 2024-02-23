@@ -365,7 +365,10 @@ grid-column: 1;
 }
 
 .modedejeuselect {
-  background: linear-gradient(to bottom, #57c1eb 0%,#246fa8 100%);
+  background: transparent url(/assets/img/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;  
   background-color: #46A6D4;
   border-color: #FBDA3D;
   border-radius: 5px;
@@ -382,7 +385,11 @@ grid-column: 1;
 .dark-theme .modedejeuselect {
   color: white;
   border-color: black;
-  background: linear-gradient(to bottom, #010A10 30%,#59230B 80%,#2F1107 100%);
+  /* background: linear-gradient(to bottom, #010A10 30%,#59230B 80%,#2F1107 100%); */
+background-image: url(/assets/img/bg2.png);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
   background-color: #0B0D0F;
   border-color: white;
   border-radius: 5px;
