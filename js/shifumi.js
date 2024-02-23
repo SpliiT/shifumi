@@ -1,6 +1,20 @@
 const choix = ["pierre", "papier", "ciseaux", "puit", "jul"];
 let scoreJoueur = 0;
 let scoreOrdinateur = 0;
+let nombreVictoiresNecessaires = 3;
+
+function changerModeJeu() {
+  const selectMode = document.getElementById("mode");
+  nombreVictoiresNecessaires = parseInt(selectMode.value);
+  réinitialiserScores();
+}
+
+function réinitialiserScores() {
+  scoreJoueur = 0;
+  scoreOrdinateur = 0;
+  document.getElementById("score").innerText = `Joueur ${scoreJoueur} - ${scoreOrdinateur} Ordinateur`;
+  document.getElementById("score").style.display = "none"; // Masquer la section du score
+}
 
 function PrendreChoixOrdinateur(choixjoueur) {
   const randomIndex = Math.floor(Math.random() * 3);
@@ -46,13 +60,45 @@ function choisirOption(choixjoueur) {
     scoreOrdinateur++;
   } else if (choixjoueur === "jul" && choixordinateur === "jul") {
     document.getElementById("resultat-text").innerText =
-      "On m'appelle l'ovni  🛸👽";
+      "On m'appelle l'ovni 🛸👽";
   } else {
     document.getElementById("resultat-text").innerText =
       "Ordinateur 🤖 a gagné ! ";
     scoreOrdinateur++;
   }
 
-  document.getElementById("score").innerText = `Joueur ${scoreJoueur} - ${scoreOrdinateur} Ordinateur`;
-  document.querySelector(".result").style.display = "block";
+  document.getElementById("score").innerHTML = `Joueur ${scoreJoueur} - ${scoreOrdinateur} Ordinateur<br>`;
+
+  if (document.getElementById("score").style.display === "none") {
+    document.getElementById("score").style.display = "block";
+  }
+
+  if (scoreJoueur === nombreVictoiresNecessaires) {
+    afficherMessageVictoireJoueur(``);
+    réinitialiserScores();
+} else if (scoreOrdinateur === nombreVictoiresNecessaires) {
+    afficherMessageVictoireOrdi(``);
+    réinitialiserScores();
+}
+
+function afficherMessageVictoireJoueur(message) {
+    const resultatContainer = document.getElementById("resultat-text");
+    resultatContainer.innerText = message;
+
+    const imageElement = document.createElement("img");
+    imageElement.src = "assets/img/winjoueurtest.png"; 
+    imageElement.style.width = "300px"; // 
+
+    resultatContainer.appendChild(imageElement);
+}
+}
+function afficherMessageVictoireOrdi(message) {
+  const resultatContainer = document.getElementById("resultat-text");
+  resultatContainer.innerText = message;
+
+  const imageElement = document.createElement("img");
+  imageElement.src = "assets/img/winordi.png"; 
+  imageElement.style.width = "300px"; // 
+
+  resultatContainer.appendChild(imageElement);
 }

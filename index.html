@@ -14,23 +14,28 @@
   <header>
     <nav>
       <ul>
- <span data-tilt> <img src="assets/img/rock.png" id="gameImage" onclick="choisirOption('puit')"></span>
+        <span data-tilt> <img src="assets/img/rock.png" id="gameImage" onclick="choisirOption('puit')"></span>
         <li>
           <h2>Shifumi - SpliiT Dev</h2>
         </li>
-      
       </ul>
     </nav><span switch-tilt>    
-
       <label class="switch">
         <input type="checkbox" id="themeSwitch">
         <span class="slider round"></span>
       </label></span>
-
   </header>
 
   <section class="section one" id="one">
     <div class="items">
+      <div class="wrapper">
+        <label for="mode" class="modedejeu">Choisissez le mode de jeu : &nbsp</label>
+        <select id="mode" class="modedejeuselect" onchange="changerModeJeu()">
+          <option value="3">3 victoires</option>
+          <option value="5">5 victoires</option>
+          <option value="10">10 victoires</option>
+        </select>
+      </div>
       <span data-tilt> <h1 class="choix">Choisissez votre coup :</h1><br></span>
       <div class="grid">
         <span data-tilt> <img src="assets/img/pierre.png" class="mains" onclick="choisirOption('pierre')"></img></span>
@@ -38,21 +43,21 @@
         <span data-tilt><img src="assets/img/ciseaux.png" class="mains" onclick="choisirOption('ciseaux')"></img></span>
       </div>
     </div>
-    <span result-tilt> <div class="result">        </span>
-      <h2 id="resultat-text" class="choix" style="margin-top: 30px; text-align: center;"></h2></span>
-      <h3 id="score" class="choix"></h3>
-      <div class="result-item">
- <p id="joueur" class="joueur"></p> 
     
-  <p id="ordinateur" class="ordinateur"></p> 
-
-
+    <span result-tilt>     
+    <div class="result">  
+      <h2 id="resultat-text" class="choix" style="margin-top: 30px; text-align: center;"></h2></span>
+      <h3 id="score" class="choix"></h3><br>
+      
+      <div class="result-item">
+        <p id="joueur" class="joueur"></p> 
+        <p id="ordinateur" class="ordinateur"></p>   </span>
       </div>
   </section>
-<footer>
-  <p>&copy; SpliiT Dev</p><span data-tilt><a href="https://github.com/SpliiT/shifumi/" target="_blank"><img src="/assets/img/github.png" id="github" class="github"></a></span>
-</footer>
 
+  <footer>
+    <p>&copy; SpliiT Dev</p><span data-tilt><a href="https://github.com/SpliiT/shifumi/" target="_blank"><img src="/assets/img/github.png" id="github" class="github"></a></span>
+  </footer>
 
   <script src="js/shifumi.js"></script>
   <script src="js/script.js"></script>
