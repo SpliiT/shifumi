@@ -1,7 +1,6 @@
 const choix = ["pierre", "papier", "ciseaux", "puit", "jul"];
 let scoreJoueur = 0;
 let scoreOrdinateur = 0;
-let victoiresTotales = 0;
 let nombreVictoiresNecessaires = 3;
 
 function changerModeJeu() {
@@ -13,17 +12,8 @@ function changerModeJeu() {
 function réinitialiserScores() {
   scoreJoueur = 0;
   scoreOrdinateur = 0;
-  victoiresTotales = 0;
   document.getElementById("score").innerText = `Joueur ${scoreJoueur} - ${scoreOrdinateur} Ordinateur`;
-  document.getElementById("victoiresTotales").innerText = `Victoires Totales : ${victoiresTotales}`;
-  document.getElementById("score").style.display = "none";
-}
-
-function réinitialiserPartie() {
-  réinitialiserScores();
-  document.getElementById("resultat-text").innerText = "";
-  document.getElementById("joueur").innerHTML = "";
-  document.getElementById("ordinateur").innerHTML = "";
+  document.getElementById("score").style.display = "none"; // Masquer la section du score
 }
 
 function PrendreChoixOrdinateur(choixjoueur) {
@@ -86,33 +76,29 @@ function choisirOption(choixjoueur) {
   if (scoreJoueur === nombreVictoiresNecessaires) {
     afficherMessageVictoireJoueur(``);
     réinitialiserScores();
-  } else if (scoreOrdinateur === nombreVictoiresNecessaires) {
+} else if (scoreOrdinateur === nombreVictoiresNecessaires) {
     afficherMessageVictoireOrdi(``);
     réinitialiserScores();
-  }
 }
 
 function afficherMessageVictoireJoueur(message) {
-  const resultatContainer = document.getElementById("resultat-text");
-  resultatContainer.innerText = message;
+    const resultatContainer = document.getElementById("resultat-text");
+    resultatContainer.innerText = message;
 
-  const imageElement = document.createElement("img");
-  imageElement.src = "assets/img/winjoueur.png"; 
-  imageElement.style.width = "300px"; 
+    const imageElement = document.createElement("img");
+    imageElement.src = "assets/img/winjoueur.png"; 
+    imageElement.style.width = "300px"; // 
 
-  resultatContainer.appendChild(imageElement);
-  victoiresTotales++;
-  document.getElementById("victoiresTotales").innerText = `Victoires Totales : ${victoiresTotales}`;
+    resultatContainer.appendChild(imageElement);
 }
-
-
+}
 function afficherMessageVictoireOrdi(message) {
   const resultatContainer = document.getElementById("resultat-text");
   resultatContainer.innerText = message;
 
   const imageElement = document.createElement("img");
   imageElement.src = "assets/img/winordi.png"; 
-  imageElement.style.width = "300px"; 
+  imageElement.style.width = "300px"; // 
 
   resultatContainer.appendChild(imageElement);
 }

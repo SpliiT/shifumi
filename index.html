@@ -15,9 +15,7 @@
     <nav>
       <ul>
         <span data-tilt> <img src="assets/img/rock.png" id="gameImage" onclick="choisirOption('puit')"></span>
-        <li>
-          <h2>Shifumi - SpliiT Dev</h2>
-        </li>
+          <span data-tilt> <a href="index.html" class="choix"> <h2 class="choix">&nbsp Shifumi - SpliiT Dev</h2></a></span>
       </ul>
     </nav><span switch-tilt>    
       <label class="switch">
@@ -29,8 +27,8 @@
   <section class="section one" id="one">
     <div class="items">
       <div class="wrapper">
-        <label for="mode" class="modedejeu">Choisissez le mode de jeu : &nbsp</label>
-        <select id="mode" class="modedejeuselect" onchange="changerModeJeu()">
+        <span data-tilt> <label for="mode" class="modedejeu">Choisissez le mode de jeu</label></span>
+        <span data-tilt><select id="mode" class="modedejeuselect" onchange="changerModeJeu()"></span>
           <option value="3">3 victoires</option>
           <option value="5">5 victoires</option>
           <option value="10">10 victoires</option>
@@ -56,7 +54,7 @@
   </section>
 
   <footer>
-    <p>&copy; SpliiT Dev</p><span data-tilt><a href="https://github.com/SpliiT/shifumi/" target="_blank"><img src="/assets/img/github.png" id="github" class="github"></a></span>
+   <span data-tilt> <p style="font-weight: bold;">&copy; SpliiT Dev</p></span><span data-tilt><a href="https://github.com/SpliiT/shifumi/" target="_blank"><img src="/assets/img/github.png" id="github" class="github"></a></span>
   </footer>
 
   <script src="js/shifumi.js"></script>
