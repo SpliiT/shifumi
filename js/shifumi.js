@@ -80,7 +80,7 @@ function choisirOption(choixjoueur) {
 
   document.getElementById(
     "score"
-  ).innerHTML = `Joueur ${scoreJoueur} - ${scoreOrdinateur} Ordinateur<br>`;
+  ).innerHTML = `Joueur ${scoreJoueur} - ${scoreOrdinateur} Ordinateur`;
 
   if (document.getElementById("score").style.display === "none") {
     document.getElementById("score").style.display = "block";

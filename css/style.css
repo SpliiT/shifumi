@@ -62,7 +62,6 @@ header {
 
 .logo {
   width: 50px;
-  font-weight: bold;
 }
 
 
@@ -136,9 +135,6 @@ footer {
   color: white;
 }
 
-
-
-/* Switch bouton */
 .switch {
   position: relative;
   display: inline-block;
